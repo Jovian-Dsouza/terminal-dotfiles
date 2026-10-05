@@ -1,6 +1,6 @@
 # terminal-dotfiles
 
-Public slice of terminal tooling config: **WezTerm** and **herdr**.
+Public slice of terminal tooling config: **WezTerm**, **herdr**, and **Neovim**.
 
 ## Install
 
@@ -13,6 +13,7 @@ chmod +x .githooks/pre-push scripts/validate-no-secrets.sh
 ln -sf "$(pwd)/.wezterm.lua" ~/.wezterm.lua
 mkdir -p ~/.config/herdr
 ln -sf "$(pwd)/.config/herdr/config.toml" ~/.config/herdr/config.toml
+ln -sfn "$(pwd)/.config/nvim" ~/.config/nvim
 ```
 
 ## Validate before push

@@ -3,6 +3,13 @@
 .plugins.lock
 release-notes.json
 
+# Neovim runtime (never sync)
+.config/nvim/lazy/
+.config/nvim/swap/
+.config/nvim/undo/
+.config/nvim/shada/
+.config/nvim/.netrwhist
+
 # Secrets and env files
 .env
 .env.*

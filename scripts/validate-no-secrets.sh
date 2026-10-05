@@ -62,6 +62,10 @@ while IFS= read -r tracked; do
       echo "Blocked herdr runtime file: $tracked" >&2
       FAIL=1
       ;;
+    .config/nvim/lazy/*|.config/nvim/swap/*|.config/nvim/undo/*)
+      echo "Blocked Neovim runtime path: $tracked" >&2
+      FAIL=1
+      ;;
   esac
 done < <(git ls-files)
 

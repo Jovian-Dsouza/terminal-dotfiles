@@ -1,0 +1,22 @@
+-- Autocmds are automatically loaded on the VeryLazy event
+-- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
+--
+-- Add any additional autocmds here
+-- with `vim.api.nvim_create_autocmd`
+--
+-- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
+--- Close the default empty buffer when opening a directory
+
+-- vim.api.nvim_create_autocmd("BufAdd", {
+--   group = vim.api.nvim_create_augroup("FixGhostBuffer", { clear = true }),
+--   callback = function(args)
+--     -- Check if the buffer is empty and has no name
+--     if vim.api.nvim_buf_get_name(args.buf) == "" and vim.bo[args.buf].buftype == "" then
+--       vim.schedule(function()
+--         if vim.api.nvim_buf_is_valid(args.buf) then
+--           vim.api.nvim_buf_delete(args.buf, { force = true })
+--         end
+--       end)
+--     end
+--   end,
+-- })

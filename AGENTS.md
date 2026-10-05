@@ -8,8 +8,11 @@ Only maintain these configs (do not add unrelated dotfiles):
 
 - `.wezterm.lua` — WezTerm
 - `.config/herdr/config.toml` — herdr
+- `.config/nvim/` — Neovim (LazyVim-style layout; no `state/` or plugin checkouts)
 
 Never add herdr runtime files: `*.log`, `.plugins.lock`, `release-notes.json`.
+
+Never add Neovim runtime/cache: `lazy/` plugin trees, `shada`, `swap`, `undo`, or machine-local secrets in provider config (API keys must use env vars only).
 
 ## Secret policy (mandatory)
 
@@ -55,4 +58,4 @@ If validation fails, fix or revert the offending content before merging.
 3. Run `bash scripts/validate-no-secrets.sh`.
 4. Commit with a clear message; push only after validation passes.
 
-If the user asks to sync from private yadm dotfiles, copy **only** the two config paths listed in Scope — never copy logs, lockfiles, or entire home-directory trees.
+If the user asks to sync from private yadm dotfiles, copy **only** the paths listed in Scope — never copy logs, lockfiles, plugin vendor trees, or entire home-directory trees.
