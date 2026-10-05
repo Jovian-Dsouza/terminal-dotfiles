@@ -1,0 +1,19 @@
+onboarding = false
+
+[ui.toast]
+delivery = "system"
+
+[ui.sound]
+enabled = true
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[ui]
+# Agents panel order: explicit choice of "spaces" (grouped by space, the default) over "priority".
+agent_panel_sort = "spaces"
+
+[keys]
+close_pane = "prefix+w"
+close_tab = "prefix+x"

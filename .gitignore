@@ -1,0 +1,20 @@
+# Runtime / machine-local (never sync)
+*.log
+.plugins.lock
+release-notes.json
+
+# Secrets and env files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+credentials.json
+secrets.*
+
+# OS / editor
+.DS_Store
+*.swp
+*.swo
